@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BatteryConfiguration from "./components/BatteryConfiguration";
+import BatteriesList from "./components/BatteryList";
+import "../src/styles/main.css";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h1 className="text-4xl font-bold mb-6 center">
+            Battery Configuration
+          </h1>
+          <BatteriesList />
+        </div>
+        <div>
+          <BatteryConfiguration />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
